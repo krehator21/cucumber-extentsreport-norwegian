@@ -100,7 +100,7 @@
         <dependency>
             <groupId>com.aventstack</groupId>
             <artifactId>extentreports</artifactId>
-            <version>${extentreports.version}</version>
+            <version>3.0.7-SNAPSHOT</version>
             <scope>provided</scope>
         </dependency>
     </dependencies>
