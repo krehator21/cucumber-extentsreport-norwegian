@@ -1,13 +1,13 @@
 #language: no
-Egenskap: My Second Feature
+Egenskap: Min første scenario
 
-  Scenario: My First Scenario
-    Gitt I have 10 cukes in my belly
-    Når I print
+  Scenario: Scenario med åøæ
+    Gitt at jeg har 10 cukes æåø
+    Når jeg skriver ut år etter år
 
-  Scenario: My Second Scenario
-    Gitt I have 7 cukes in my bellies
-    Når I login with credentials
+  Scenario: Scenario om øl
+    Gitt jeg skal drikke 7 åkevitt
+    Når I login with credentials i år
     | user1 | pass1 |
     | user2 | pass2 |
     | user3 | pass3 |

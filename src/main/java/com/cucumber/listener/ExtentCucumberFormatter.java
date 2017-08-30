@@ -7,6 +7,7 @@ import com.aventstack.extentreports.markuputils.Markup;
 import com.aventstack.extentreports.markuputils.MarkupHelper;
 import com.aventstack.extentreports.reporter.ExtentHtmlReporter;
 import com.aventstack.extentreports.reporter.ExtentXReporter;
+import com.aventstack.extentreports.utils.StringUtil;
 import gherkin.formatter.Formatter;
 import gherkin.formatter.Reporter;
 import gherkin.formatter.model.*;
@@ -63,7 +64,7 @@ public class ExtentCucumberFormatter implements Reporter, Formatter {
         }
         extentReports = new ExtentReports();
         ExtentProperties extentProperties = ExtentProperties.INSTANCE;
-        if (extentProperties.getExtentXServerUrl() != null) {
+        if (StringUtil.isNotNullOrEmpty(extentProperties.getExtentXServerUrl())) {
             String extentXServerUrl = extentProperties.getExtentXServerUrl();
             try {
                 URL url = new URL(extentXServerUrl);
@@ -76,7 +77,7 @@ public class ExtentCucumberFormatter implements Reporter, Formatter {
                 throw new IllegalArgumentException("Invalid ExtentX Server URL", e);
             }
         }
-        if (extentProperties.getGherkinDialect() != null){
+        if (StringUtil.isNotNullOrEmpty(extentProperties.getGherkinDialect())){
             try {
                 extentReports.setGherkinDialect(extentProperties.getGherkinDialect());
             } catch (UnsupportedEncodingException e) {

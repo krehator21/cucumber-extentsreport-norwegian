@@ -37,4 +37,25 @@ public class MyStepdefs {
 
     @Når("^I login with credentials$") public void iLoginWithCredentials(DataTable table) {
     }
+
+    @Gitt("^at jeg har (\\d+) cukes æåø$")
+    public void at_jeg_har_cukes_aeaa(int cukes) throws Throwable {
+        System.out.format("Cukes: %n\n", cukes);
+    }
+
+    @Når("^jeg skriver ut år etter år$")
+    public void jeg_skriver_ut_år_etter_år() throws Throwable {
+
+    }
+
+    @Gitt("^jeg skal drikke (\\d+) åkevitt$")
+    public void jeg_skal_drikke_åkevitt(int cukes) throws Throwable {
+        System.out.format("Åkevitt: %n\n", cukes);
+    }
+
+    @Når("^I login with credentials i år$")
+    public void i_login_with_credentials_i_år(DataTable arg1) throws Throwable {
+
+    }
+
 }
